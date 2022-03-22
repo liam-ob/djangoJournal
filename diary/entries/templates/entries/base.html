@@ -1,0 +1,35 @@
+<!-- entries/templates/entries/base.html -->
+
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Liams Websoite</title>
+    <link rel="stylesheet" href="{% static 'css/diary.css' %}">
+</head>
+
+<body>
+    <p>Welcome, {{ user.username }}.</p>
+    <h1><a href="/">Hello …</a></h1>
+
+    {% if messages %}
+    <ul class="messages">
+    {% for message in messages %}
+        <li class="message">
+            {{ message }}
+        </li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% block content %}{% endblock %}
+
+<hr>
+<a href="{% url 'admin:logout' %}">Logout</a>
+</body>
+
+</html>
