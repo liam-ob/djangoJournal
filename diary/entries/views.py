@@ -34,12 +34,13 @@ class EntryUpdateView(LoginRequiredMixin, UpdateView, SuccessMessageMixin):
     model = Entry
     fields = ['title', 'content']
     success_message = "you just managed to update a entry fool"
-
-    def get_success_url(self):
-        return reverse_lazy(
-            "entry-detail",
-            kwargs={"pk": self.entry.id}
-        )
+    success_url = reverse_lazy('entry-list')
+    #
+    # def get_success_url(self):
+    #     return reverse_lazy(
+    #         "entry-detail",
+    #         kwargs={"pk": self.entry.id}
+    #     )
 
 
 class EntryDeleteView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
