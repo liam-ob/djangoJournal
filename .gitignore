@@ -1,0 +1,17 @@
+;; 22/03/2022
+;; liam-ob
+;;
+;; gitignore for Django using pyCharm
+
+
+;;files to ignore
+
+
+;;extensions to ignore
+*.log
+
+
+;;directories to ignore
+.idea/
+.idea.misc.xml
+.dbsqlite3
