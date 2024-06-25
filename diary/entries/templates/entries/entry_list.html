@@ -14,13 +14,13 @@
         <h3>
             {% if entry.important %}
             <a href="{% url 'entry-detail' entry.id %}">
-                {{ entry.title }}
+                <b style="background-color: #ff5c5c6b;">
+                    {{ entry.title }}
+                </b>
             </a>
             {% else %}
             <a href="{% url 'entry-detail' entry.id %}">
-                <b style="color: #8B0000;">
-                    {{ entry.title }}
-                </b>
+                {{ entry.title }}
             </a>
             {% endif %}
         </h3>

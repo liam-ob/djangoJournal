@@ -11,7 +11,7 @@ class Login(models.Model):
 class Entry(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
-    date_created = models.DateTimeField(default=timezone.now())
+    date_created = models.DateTimeField(default=timezone.now)
     important = models.BooleanField(default=False)
 
     def __str__(self):
